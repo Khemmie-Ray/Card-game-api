@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     background-image: url(img/table.png);
@@ -16,17 +20,49 @@ body {
     letter-spacing: .1em;
 }
 
+/* ======= Typography ======== */
+
+h2, h1 {
+    margin: 0;
+}
+
+h2 {
+    margin-bottom: .2em;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin: auto;
+}
+
+#p-top {
+    font-size: 1.3rem;
+}
+
+/* ======= Layout ======== */
+
 #new-Deck, #draw {
     background-color: yellow;
-    font-size: 1.2rem;
-    padding: .3em 4em;
+    font-size: 1.5rem;
+    padding: .8em;
     cursor: pointer;
     border: none;
+}
+
+#new-Deck {
+    width: 40%;
+}
+
+#draw {
+    margin-bottom: 1em;
+    width: 20%;
 }
 
 .top {
     display: flex;
     align-self: flex-start;
+    margin-top: 1em;
+    width: 40%;
 }
 
 #p-top {
@@ -45,22 +81,24 @@ button:disabled {
     margin-bottom: 1em;
 }
 
-h2, h4 {
-    margin: 0;
-}
-
-h4 {
-    margin-bottom: .2em;
-}
-
 #cards {
     display: flex;
     flex-direction: column;
 }
 
+/* ======= Media Query ======== */
+
 @media (max-width: 600px) {
     .top {
         flex-direction: column;
+    }
+
+    .top {
+        width: 100%;
+    }
+
+    #new-Deck, #draw {
+        width: 90%;
     }
 }
 
